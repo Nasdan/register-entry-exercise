@@ -1,0 +1,41 @@
+{
+  "name": "register-entry-exercise",
+  "version": "1.0.0",
+  "description": "register-entry-exercise",
+  "main": "index.js",
+  "scripts": {
+    "start": "webpack-dev-server --mode development",
+    "build": "webpack --mode development"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/cli": "^7.7.0",
+    "@babel/core": "^7.7.2",
+    "@babel/preset-env": "^7.7.1",
+    "@types/react": "^16.9.11",
+    "@types/react-dom": "^16.9.4",
+    "@types/react-router-dom": "^5.1.2",
+    "awesome-typescript-loader": "^5.2.1",
+    "file-loader": "^4.2.0",
+    "html-webpack-plugin": "^3.2.0",
+    "typescript": "^3.7.2",
+    "url-loader": "^2.2.0",
+    "webpack": "^4.41.2",
+    "webpack-cli": "^3.3.10",
+    "webpack-dev-server": "^3.9.0"
+  },
+  "dependencies": {
+    "@lemoncode/fonk": "^1.1.0",
+    "@lemoncode/fonk-final-form": "^2.3.0",
+    "@material-ui/core": "^4.6.1",
+    "@material-ui/icons": "^4.5.1",
+    "axios": "^0.19.0",
+    "final-form": "^4.18.6",
+    "react": "^16.12.0",
+    "react-dom": "^16.12.0",
+    "react-final-form": "^6.3.3",
+    "react-router-dom": "^5.1.2",
+    "react-signature-canvas": "^1.0.3"
+  }
+}
