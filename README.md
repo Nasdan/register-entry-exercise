@@ -1,5 +1,7 @@
 # Intro
 
+Something
+
 In this excercise we will implement a simple entry / exit register application.
 
 # Functional
