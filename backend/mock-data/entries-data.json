@@ -1,0 +1,28 @@
+{
+  "entries": [{
+    "id": "1",
+    "cardNumber": "7679",
+    "entryTime": "20/11/2019 08:05",
+    "exitTime": "20/11/2019 18:01",
+    "name": "John",
+    "lastName": "Doe",
+    "dni": "12345678X",
+    "company": "LemonCode",
+    "visits": "Alex",
+    "signature": ""
+  },
+  {
+    "id": "2",
+    "cardNumber": "7679",
+    "entryTime": "19/11/2019 07:55",
+    "exitTime": "19/11/2019 18:06",
+    "name": "John",
+    "lastName": "Doe",
+    "dni": "12345678X",
+    "company": "LemonCode",
+    "visits": "Alex",
+    "signature": ""
+  }
+]
+
+}
