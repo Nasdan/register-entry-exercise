@@ -9,7 +9,7 @@
     "dni": "12345678X",
     "company": "LemonCode",
     "visits": "Alex",
-    "signature": ""
+    "signature": "/thumbnails/signatureTest.png"
   },
   {
     "id": "2",
@@ -21,7 +21,7 @@
     "dni": "12345678X",
     "company": "LemonCode",
     "visits": "Alex",
-    "signature": ""
+    "signature": "/thumbnails/signatureTest.png"
   }
 ]
 
