@@ -59,9 +59,7 @@ export const EntryRegistryComponent: React.FunctionComponent<Props> = props => {
                 <Button type="submit" variant="contained" color="primary">
                   Login
                 </Button>
-                <pre>{JSON.stringify(values, undefined, 2)}</pre>
                 <Field name="login">
-                  {props => <pre>{JSON.stringify(props, undefined, 2)}</pre>}
                 </Field>
               </form>
             )}
