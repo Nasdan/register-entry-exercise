@@ -18,56 +18,25 @@ const useStyles = makeStyles({
 });
 
 interface Props {
-  onLogin: (loginInfo: LoginEntityVm) => void;
-  initialLogin: LoginEntityVm;
 }
 
 export const EntryRegistryComponent: React.FunctionComponent<Props> = props => {
   const classes = useStyles(props);
-  const { onLogin, initialLogin } = props;
+  const {  } = props;
 
-  return (
-    <Card>
-      <CardHeader title="Login" />
-      <CardContent>
-        <div className={classes.formContainer}>
-          <Form
-            onSubmit={values => onLogin(values)}
-            initialValues={initialLogin}
-            render={({ handleSubmit, submitting, pristine, values }) => (
-              <form onSubmit={handleSubmit} noValidate>
-                <Field
-                  fullWidth
-                  name="login"
-                  component={TextField}
-                  type="text"
-                  label="Name"
-                  validate={(value, _, meta) =>
-                    formValidation.validateField(meta.name, value)
-                  }
-                />
-                <Field
-                  fullWidth
-                  name="password"
-                  component={TextField}
-                  type="password"
-                  label="Password"
-                  validate={(value, _, meta) =>
-                    formValidation.validateField(meta.name, value)
-                  }
-                />
-                <Button type="submit" variant="contained" color="primary">
-                  Login
-                </Button>
-                <pre>{JSON.stringify(values, undefined, 2)}</pre>
-                <Field name="login">
-                  {props => <pre>{JSON.stringify(props, undefined, 2)}</pre>}
-                </Field>
-              </form>
-            )}
-          />
-        </div>
-      </CardContent>
-    </Card>
-  );
+  
+    return (
+      <form onSubmit={this.handleSubmit}>
+        <label htmlFor="cardName">Card name</label>
+        <input id="cardName" name="cardName" type="text" />
+
+        <label htmlFor="email">Enter your email</label>
+        <input id="email" name="email" type="email" />
+
+        <label htmlFor="birthdate">Enter your birth date</label>
+        <input id="birthdate" name="birthdate" type="text" />
+
+        <button>Save</button>
+      </form>
+    );
 };
