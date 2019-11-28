@@ -1,11 +1,41 @@
 # Backend
 
-# About Basefactor + Lemoncode
+## Available entry points:
 
-We are an innovating team of Front End Developers, passionate about turning your ideas into robust products.
+* List All:   GET - http://localhost:3000/api/entries
+* Get by Id:  GET - http://localhost:3000/api/entries/{id}
+* Create:     POST - http://localhost:3000/api/entries  (json entity in request body)
+* Modify:     PUT - http://localhost:3000/api/entries/{id}  (json entity in request body)
+* Delete:     DELETE - http://localhost:3000/api/entries/{id}
 
-[Basefactor, consultancy by Lemoncode](http://www.basefactor.com) provides consultancy and coaching services.
+## Entity contract
 
-[Lemoncode](http://lemoncode.net/services/en/#en-home) provides training services.
+```typescript
+  interface Entry {
+        id: string;
+        cardNumber: string;
+        entryTime: string;
+        exitTime: string;
+        name: string;
+        lastName: string;
+        dni: string;
+        company: string;
+        visits: string;
+        signature: string;
+  }
+```
 
-For the LATAM/Spanish audience we are running an Online Front End Master degree, more info: http://lemoncode.net/master-frontend
+```json
+    {
+      "id": "2",
+      "cardNumber": "7679",
+      "entryTime": "19/11/2019 07:55",
+      "exitTime": "19/11/2019 18:06",
+      "name": "John",
+      "lastName": "Doe",
+      "dni": "12345678X",
+      "company": "LemonCode",
+      "visits": "Alex",
+      "signature": "/thumbnails/signatureTest.png"
+    }
+```

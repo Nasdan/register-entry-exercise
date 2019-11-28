@@ -1,0 +1,28 @@
+{
+  "entries": [
+    {
+      "id": "1",
+      "cardNumber": "7679",
+      "entryTime": "2019-11-21T16:26:00",
+      "exitTime": "2020-11-21T16:26:00",
+      "name": "Pau",
+      "lastName": "Borras",
+      "dni": "12345678X",
+      "company": "LemonCode",
+      "visits": "Alex",
+      "signature": "/thumbnails/signatureTest.png"
+    },
+    {
+      "id": "2",
+      "cardNumber": "7679",
+      "entryTime": "2019-11-21T16:26:00",
+      "exitTime": "2020-11-21T16:26:00",
+      "name": "John",
+      "lastName": "Doe",
+      "dni": "12345678X",
+      "company": "LemonCode",
+      "visits": "Alex",
+      "signature": "/thumbnails/signatureTest.png"
+    }
+  ]
+}
