@@ -1,9 +1,9 @@
-export interface LoginEntityVm {
+export interface EntryRegistryVm {
   login: string;
   password: string;
 }
 
-export const createEmptyLogin = (): LoginEntityVm => ({
+export const createEmptyLogin = (): EntryRegistryVm => ({
   login: '',
   password: '',
 });

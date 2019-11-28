@@ -6,7 +6,7 @@ import CardHeader from '@material-ui/core/CardHeader';
 import CardContent from '@material-ui/core/CardContent';
 import { TextField } from 'common/components/forms';
 import Button from '@material-ui/core/Button';
-import { LoginEntityVm } from './entry-registry.vm';
+import { EntryRegistryVm } from './entry-registry.vm';
 import { formValidation } from './entry-registry.validation';
 
 const useStyles = makeStyles({
@@ -17,26 +17,56 @@ const useStyles = makeStyles({
   },
 });
 
-interface Props {
+interface Props extends WithStyles<typeof styles> {
+  registryEntry: EntryRegistryVm;
+  onFieldUpdate: (id: string, value: any) => void;
+  onSave: () => void;
 }
 
-export const EntryRegistryComponent: React.FunctionComponent<Props> = props => {
-  const classes = useStyles(props);
-  const {  } = props;
+
 
   
+  export const EntryRegistryComponent = (props: Props) => {
+    const { classes, hotel, cities, onFieldUpdate, onSave } = props;
+  
     return (
-      <form onSubmit={this.handleSubmit}>
-        <label htmlFor="cardName">Card name</label>
-        <input id="cardName" name="cardName" type="text" />
-
-        <label htmlFor="email">Enter your email</label>
-        <input id="email" name="email" type="email" />
-
-        <label htmlFor="birthdate">Enter your birth date</label>
-        <input id="birthdate" name="birthdate" type="text" />
-
-        <button>Save</button>
-      </form>
-    );
-};
+      <div className={classes.formContainer}>
+        <TextFieldForm
+          label="Name"
+          name="name"
+          value={hotel.name}
+          onChange={onFieldUpdate}
+        />
+        {/* for multilanguage support rather use formErrors.name.type */}
+  
+        <img className={classes.picture} src={hotel.picture} />
+  
+        <RatingForm
+          name="rating"
+          value={hotel.rating}
+          max={5}
+          onChange={onFieldUpdate}
+        />
+  
+        <DropdownForm
+          name="city"
+          label="city"
+          onChange={onFieldUpdate}
+          value={hotel.city}
+          list={cities}
+        />
+  
+        <TextAreaForm
+          placeholder="Description"
+          name="description"
+          label="description"
+          value={hotel.description}
+          onChange={onFieldUpdate}
+        />
+  
+        <Button variant="contained" color="primary" onClick={onSave}>
+          Save
+        </Button>
+      </div>
+    )};
+  
