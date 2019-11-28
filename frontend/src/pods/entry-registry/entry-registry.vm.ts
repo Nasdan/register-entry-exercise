@@ -1,9 +1,20 @@
-export interface LoginEntityVm {
-  login: string;
-  password: string;
-}
+export interface EntryRegistryVm 
+{
+  cardNumber: string;
+  name : string;
+  lastname : string;
+  DNI : string;
+  company : string;
+  visits : string;
+  signature : string;
+} 
 
-export const createEmptyLogin = (): LoginEntityVm => ({
-  login: '',
-  password: '',
+export const createEmptyEntryRegistry = (): EntryRegistryVm => ({
+  cardNumber: "",
+  name : "",
+  lastname : "",
+  DNI : "",
+  company : "",
+  visits : "",
+  signature : "",
 });
