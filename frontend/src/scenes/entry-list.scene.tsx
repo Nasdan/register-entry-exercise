@@ -1,6 +1,6 @@
 import * as React from 'react';
-import { SignatureComponent } from 'common-app/signature.component';
+import { UserCollectionComponent } from 'pods/user-collection';
 
-export const EntryListScene: React.FunctionComponent = () => {
-  return <h1><SignatureComponent/></h1>;
+export const EntryListScene: React.FC = () => {
+  return <UserCollectionComponent onNewUser={() => alert(`New USER!`)} />;
 };
