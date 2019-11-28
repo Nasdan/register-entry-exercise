@@ -3,7 +3,7 @@ import { makeStyles } from '@material-ui/core/styles';
 export const useStyles = makeStyles({
   container: {
     width: '100%',
-    height: '100vh',
+    height: '100%',
     top: '10%',
     left: '10%'
   },

@@ -1,5 +1,5 @@
 
-interface Entry {
+export interface Entry {
   id: string;
   cardNumber: string;
   entryTime: string;
@@ -23,8 +23,12 @@ export const getEntryById = (id: string): Promise<Entry> => {
 
 
 export const insertEntry = (entry: Entry): Promise<Entry> => {
+  console.log(JSON.stringify(entry))
   return fetch(urlEntries, {
                     method: 'post',
+                    headers: {
+                      'Content-type': 'application/json'
+                    },
                     body: JSON.stringify(entry)
                   }).then(response => response.json());
 }
