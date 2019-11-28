@@ -1,22 +1,19 @@
 import React, { Component } from "react";
 import SignaturePad from "react-signature-canvas";
 import { useStyles } from "./signature.styles";
-import { getThemeProps } from "@material-ui/styles";
-
 
 interface Props {
-  modeLectura: boolean;
-  setImageFirma?: (o: []) => void;
-  imageFirma: [];
+  readOnly: boolean;
+  setImageSignature?: (o: []) => void;
+  imageSignature: [];
 }
 
 export const SignatureComponent = (props: Props) => {
-  //const [firma, setFirma] = React.useState(null);
 
   const sigPad = React.useRef(null);
 
-  if (props.imageFirma) {
-    sigPad.current.fromData(props.imageFirma);
+  if (props.imageSignature) {
+    sigPad.current.fromData(props.imageSignature);
   }
 
   const styles = useStyles({});
@@ -31,17 +28,12 @@ export const SignatureComponent = (props: Props) => {
       </div>
     </div>
     {
-      (!props.modeLectura) &&
+      (!props.readOnly) &&
         (<>
-          <button onClick={() => props.setImageFirma(sigPad.current.toData())}>Save</button>
-          <button onClick={()=>sigPad.current.clear()}>Clear</button>
+          <button onClick={() => props.setImageSignature(sigPad.current.toData())}>Save</button>
+          <button onClick={() => sigPad.current.clear()}>Clear</button>
         </>)
     }
-
-    {/*
-    <button onClick={()=>setFirma(sigPad.current.toData())}>Save</button>
-    <button onClick={()=>sigPad.current.fromData(firma)}>Load</button>
-    */}
     </>
   );
 };
