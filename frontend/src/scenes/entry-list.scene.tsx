@@ -1,5 +1,6 @@
 import * as React from 'react';
+import { UserCollectionComponent } from 'pods/user-collection';
 
-export const EntryListScene: React.FunctionComponent = () => {
-  return <h1>Entry list scene</h1>;
+export const EntryListScene: React.FC = () => {
+  return <UserCollectionComponent onNewUser={() => alert(`New USER!`)} />;
 };
