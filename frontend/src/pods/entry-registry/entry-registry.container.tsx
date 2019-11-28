@@ -1,25 +1,18 @@
-import * as React from 'react';
-import { useHistory } from 'react-router-dom';
-import { EntryRegistryComponent } from './entry-registry.component';
-import {RouterComponent} from 'core/router';
-import { LoginEntityVm, createEmptyLogin } from './entry-registry.vm';
-import { validateCredentials } from './entry-registry.api';
+// import * as React from 'react';
+// import { useHistory } from 'react-router-dom';
+// import { EntryRegistryComponent } from './entry-registry.component';
+// import { EntryRegistryVm, createEmptyEntryRegistry } from './entry-registry.vm';
+// import { saveEntryRegistry } from './entry-registry.api';
 
-// export const EntryRegistryContainer = () => {
+// export const EntryRegistryContainer = () => 
+// {
 //   const history = useHistory();
-//   const [initialLogin] = React.useState<LoginEntityVm>(createEmptyLogin());
+//   const [initialEntryRegistry] = React.useState<EntryRegistryVm>(createEmptyEntryRegistry());
 
-//   // const handleLogin = (loginInfo: LoginEntityVm) => {
-//   //   validateCredentials(loginInfo.login, loginInfo.password).then(
-//   //     areValidCredentials => {
-//         // areValidCredentials
-//         //   ? history.push(linkRoutes.hotelCollection)
-//         //   : alert(
-//         //       'invalid credentials, use admin/test, excercise: display a mui snackbar instead of this alert.'
-//         //     );
-//       }
-//     );
+//   const handleSubmit = (entryRegistryInfo: EntryRegistryVm) => 
+//   {
+//     saveEntryRegistry(entryRegistryInfo).then(history.push());
 //   };
 
-//   return <EntryRegistryComponent onLogin={handleLogin} initialLogin={initialLogin} />;
+//   return <EntryRegistryComponent onSubmit={handleSubmit} initialLoad={initialEntryRegistry} />;
 // };

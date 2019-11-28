@@ -1,7 +1,4 @@
-export const validateCredentials = (
-  user: string,
-  password: string
-): Promise<boolean> =>
-  new Promise<boolean>(resolve =>
-    setTimeout(() => resolve(user === 'admin' && password === 'test'), 500)
-  );
+import { EntryRegistryVm } from "./entry-registry.vm";
+
+export const saveEntryRegistry = (entryRegistry : EntryRegistryVm): Promise => ({new Promise.resolve()});
+

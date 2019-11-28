@@ -3,8 +3,13 @@ import { createFinalFormValidation } from '@lemoncode/fonk-final-form';
 
 const validationSchema: ValidationSchema = {
   field: {
-    login: [Validators.required.validator],
-    password: [Validators.required.validator],
+    cardNumber: [Validators.required.validator],
+    name : [Validators.required.validator],
+    lastname : [Validators.required.validator],
+    DNI : [Validators.required.validator],
+    company : [Validators.required.validator],
+    visits : [Validators.required.validator],
+    signature : [Validators.required.validator],    
   },
 };
 
