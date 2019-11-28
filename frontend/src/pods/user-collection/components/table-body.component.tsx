@@ -6,9 +6,10 @@ interface Props {}
 
 interface Props {
   userCollection: UserVm[];
+  onEditUser: (id: number) => void;
 }
 
-export const TableBodyComponent: React.FunctionComponent<Props> = props => {
+export const TableBodyComponent: React.FC<Props> = props => {
   const { userCollection } = props;
 
   return (
@@ -17,7 +18,7 @@ export const TableBodyComponent: React.FunctionComponent<Props> = props => {
         {userCollection.map(userCollection => (
           <TableRow key={userCollection.cardNumber}>
             <TableCell align="center" component="th" scope="row">
-              {userCollection.cardNumber}
+              {userCollection.id}
             </TableCell>
             <TableCell align="center">{userCollection.date}</TableCell>
             <TableCell align="center">{userCollection.firtsName}</TableCell>
@@ -28,7 +29,12 @@ export const TableBodyComponent: React.FunctionComponent<Props> = props => {
             <TableCell align="center">{userCollection.entryTime}</TableCell>
             <TableCell align="center">{userCollection.exitTime}</TableCell>
             <TableCell align="center">
-              <Button size="small" variant="contained" color="primary">
+              <Button
+                size="small"
+                variant="contained"
+                color="primary"
+                onClick={() => props.onEditUser(userCollection.id)}
+              >
                 Edit
               </Button>
             </TableCell>

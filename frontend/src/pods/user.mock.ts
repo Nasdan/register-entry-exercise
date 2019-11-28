@@ -2,6 +2,7 @@ import { UserVm } from './user-collection/user-collection.vm';
 
 export const userMock: UserVm[] = [
   {
+    id: 1,
     cardNumber: '23B',
     company: 'roche',
     date: '20/11/2019',
@@ -13,6 +14,7 @@ export const userMock: UserVm[] = [
     visits: 'Developer',
   },
   {
+    id: 2,
     cardNumber: '24B',
     company: 'roche',
     date: '21/11/2019',
@@ -24,6 +26,7 @@ export const userMock: UserVm[] = [
     visits: 'RRHH',
   },
   {
+    id: 3,
     cardNumber: '25B',
     company: 'roche',
     date: '21/11/2019',
@@ -35,6 +38,7 @@ export const userMock: UserVm[] = [
     visits: 'QA',
   },
   {
+    id: 4,
     cardNumber: '26B',
     company: 'roche',
     date: '21/11/2019',
