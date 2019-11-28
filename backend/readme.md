@@ -21,7 +21,7 @@
         dni: string;
         company: string;
         visits: string;
-        signature: string;
+        signature: [];
   }
 ```
 
@@ -36,6 +36,5 @@
       "dni": "12345678X",
       "company": "LemonCode",
       "visits": "Alex",
-      "signature": "/thumbnails/signatureTest.png"
-    }
+      "signature": [[{"x":100,"y":133.36249923706055,"time":1574947043324,"color":"black"}, ...}
 ```
