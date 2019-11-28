@@ -1,0 +1,48 @@
+import { UserVm } from './user-collection/user-collection.vm';
+
+export const userMock: UserVm[] = [
+  {
+    cardNumber: '23B',
+    company: 'roche',
+    date: '20/11/2019',
+    dni: '123456R',
+    entryTime: '07:20',
+    exitTime: '16:20',
+    firtsName: 'Jose',
+    lastName: 'Fernandez',
+    visits: 'Developer',
+  },
+  {
+    cardNumber: '24B',
+    company: 'roche',
+    date: '21/11/2019',
+    dni: '123456R',
+    entryTime: '07:20',
+    exitTime: '16:20',
+    firtsName: 'Pepe',
+    lastName: 'lopez',
+    visits: 'RRHH',
+  },
+  {
+    cardNumber: '25B',
+    company: 'roche',
+    date: '21/11/2019',
+    dni: '123456R',
+    entryTime: '07:20',
+    exitTime: '16:20',
+    firtsName: 'Silvia',
+    lastName: 'Garcia',
+    visits: 'QA',
+  },
+  {
+    cardNumber: '26B',
+    company: 'roche',
+    date: '21/11/2019',
+    dni: '123456R',
+    entryTime: '07:20',
+    exitTime: '16:20',
+    firtsName: 'Braulio',
+    lastName: 'Perez',
+    visits: 'QA',
+  },
+];
