@@ -1,1 +1,1 @@
-export * from './entry-registry.container';
+export * from './entry-registry.component';

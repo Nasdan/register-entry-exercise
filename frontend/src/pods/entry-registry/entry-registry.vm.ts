@@ -4,7 +4,7 @@ export interface EntryRegistryVm
   cardNumber: string;
   name : string;
   lastname : string;
-  DNI : string;
+  dni : string;
   company : string;
   visits : string;
   signature : string;
@@ -14,7 +14,7 @@ export const createEmptyEntryRegistry = (): EntryRegistryVm => ({
   cardNumber: "",
   name : "",
   lastname : "",
-  DNI : "",
+  dni : "",
   company : "",
   visits : "",
   signature : "",

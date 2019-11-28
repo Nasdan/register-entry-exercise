@@ -2,6 +2,7 @@ import * as React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import { TextFieldForm } from 'common/components/text-field-form';
 import { createEmptyEntryRegistry } from './entry-registry.vm';
+import { Button } from '@material-ui/core';
 
 const useStyles = makeStyles({
   formContainer: {
@@ -11,39 +12,74 @@ const useStyles = makeStyles({
   },
 });
 
-
 export const EntryRegistryComponent = () => {
-  const [entry,setEntry] =  React.useState(createEmptyEntryRegistry());
+  const [entry, setEntry] = React.useState(createEmptyEntryRegistry());
+
+  const onChangeField = (id, value) => {
+    setEntry({
+      ...entry,
+      [id]: value,
+    });
+  };
+
+  const onSave = ()=>{};
 
   return (
     <div>
-     
       <TextFieldForm
         label="Card number"
         name="cardNumber"
         value={entry.cardNumber}
-        onChange={(value) => setEntry({
-          ...entry,
-          cardNumber : value
-        })}
+        onChange={onChangeField}
       />
 
-      {/* <TextFieldForm
+      <TextFieldForm
         label="Name"
         name="name"
-        value={entryRegistry.name}
-        onChange={onFieldUpdate}
+        value={entry.name}
+        onChange={onChangeField}
       />
 
       <TextFieldForm
         label="Lastname"
         name="lastname"
-        value={entryRegistry.lastname}
-        onChange={onFieldUpdate}
+        value={entry.lastname}
+        onChange={onChangeField}
       />
-      for multilanguage support rather use formErrors.name.type */}
 
+      <TextFieldForm
+        label="DNI"
+        name="dni"
+        value={entry.dni}
+        onChange={onChangeField}
+      />
 
+      <TextFieldForm
+        label="Company"
+        name="company"
+        value={entry.company}
+        onChange={onChangeField}
+      />
+
+      <TextFieldForm
+        label="Signature"
+        name="signature"
+        value={entry.signature}
+        onChange={onChangeField}
+      />
+
+      <TextFieldForm
+        label="Visits"
+        name="visits"
+        value={entry.visits}
+        onChange={onChangeField}
+      />
+
+      {/* TODO: Add signatureCompnent */}
+
+      <Button variant="contained" color="primary" onClick={onSave}>
+        Save
+      </Button>
     </div>
   );
 };
