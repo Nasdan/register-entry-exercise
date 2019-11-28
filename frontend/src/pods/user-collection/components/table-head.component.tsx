@@ -9,7 +9,7 @@ const useStyles = makeStyles(theme => ({
   },
 }));
 
-export const TableHeadComponent: React.FunctionComponent<Props> = props => {
+export const TableHeadComponent: React.FC<Props> = props => {
   const classes = useStyles({});
   return (
     <>

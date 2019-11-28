@@ -23,7 +23,11 @@ const useStyles = makeStyles(theme => ({
   },
 }));
 
-export const UserCollectionComponent: React.FC = props => {
+interface Props {
+  onNewUser: () => void;
+}
+
+export const UserCollectionComponent: React.FC<Props> = props => {
   const classes = useStyles({});
   const [userCollection] = React.useState(userMock);
 
@@ -32,10 +36,13 @@ export const UserCollectionComponent: React.FC = props => {
       <Paper className={classes.paper}>
         <Table className={classes.table} size="small" aria-label="simple table">
           <TableHeadComponent />
-          <TableBodyComponent userCollection={userCollection}/>
+          <TableBodyComponent
+            userCollection={userCollection}
+            onEditUser={id => alert(`UserID: ${id}`)}
+          />
         </Table>
       </Paper>
-      <Button variant="contained" color="secondary">
+      <Button variant="contained" color="secondary" onClick={props.onNewUser}>
         Add new entry
       </Button>
     </div>
